@@ -38,6 +38,8 @@ public class Robot extends TimedRobot {
     DifferentialDrive drive = new DifferentialDrive(leftMotors, rightMotors);
     
     NetworkTable table;
+    NetworkTableEntry robotSpeed;
+    NetworkTableEntry robotTurnRate;
 
     /**
      * This function is run when the robot is first started up and should be used for any
@@ -50,6 +52,9 @@ public class Robot extends TimedRobot {
 
         // get a reference to the subtable called "drivebase"
         table = inst.getTable("drivebase");
+
+        robotSpeed = table.getEntry("speed");
+        robotTurnRate = table.getEntry("turnRate");
     }
 
     @Override
@@ -59,23 +64,24 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
-
+        System.out.println("autoInit");
     }
 
     @Override
     public void autonomousPeriodic() {
-        System.out.println("auto periodic");
+       System.out.println("auto periodic");
     }
 
     @Override
     public void teleopInit() {
-
+        robotTurnRate.setDouble(0);
+        robotSpeed.setDouble(0);
     }
 
     @Override
     public void teleopPeriodic() {
-        double turn = controller.getX(GenericHID.Hand.kLeft);
-        double speed = -controller.getY(GenericHID.Hand.kLeft);
+        double turn = robotTurnRate.getDouble(0);
+        double speed = robotSpeed.getDouble(0);
         drive.arcadeDrive(speed, turn);
         System.out.println("teleop periodic 6");
     }

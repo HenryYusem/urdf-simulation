@@ -17,7 +17,73 @@
     <frc-dashboard-builder address="gitpod">
         <div class="layout">
             <frc-sim-gitpod-info2></frc-sim-gitpod-info2>
-            <frc-absolute-layout dashboard-root></frc-absolute-layout>
+            <frc-absolute-layout dashboard-root>
+            <frc-urdf-viewer
+    urdf="robot.urdf"
+    max-distance="0.75"
+    controllable=""
+    camera-x="0.5367507808385713"
+    camera-y="0.27762971422684735"
+    camera-z="0.4442075427629557"
+    webbit-id="frc-urdf-viewer"
+    slot=""
+    source-provider="NetworkTables"
+    urdf-content=""
+    up="Z+"
+    ambient-color="black"
+    min-distance="0.25"
+    robot-x="0"
+    robot-y="0"
+    robot-z="0"
+    auto-rotate-speed="2"
+    class=""
+    data-x="166.1737518310547"
+    data-y="48.719024658203125"
+    style="transform: translate(166.174px, 48.719px);"
+></frc-urdf-viewer>
+<frc-differential-drivebase
+    webbit-id="frc-differential-drivebase"
+    slot=""
+    source-provider="NetworkTables"
+    left-motor-speed="0"
+    right-motor-speed="0"
+    class=""
+    data-x="494.0752868652344"
+    data-y="33.154327392578125"
+    style="transform: translate(494.075px, 33.1543px);"
+    source-key="/liveWindow/ungrouped/differentialDrive1"
+></frc-differential-drivebase>
+<frc-number-slider
+    webbit-id="frc-number-slider"
+    slot=""
+    source-provider="NetworkTables"
+    value="0"
+    min="-1"
+    max="1"
+    block-increment="0.05"
+    class=""
+    data-x="585.4726715087891"
+    data-y="411.8987274169922"
+    style="transform: translate(585.473px, 411.899px); width: 306.833px;"
+    source-key="/drivebase/turnRate"
+></frc-number-slider>
+<frc-number-slider
+    webbit-id="frc-number-slider #2"
+    slot=""
+    source-provider="NetworkTables"
+    value="0"
+    min="-1"
+    max="1"
+    block-increment="0.05"
+    class=""
+    data-x="136.93429565429688"
+    data-y="409.94580078125"
+    style="transform: translate(136.934px, 409.946px);"
+    source-key="/drivebase/speed"
+></frc-number-slider>
+
+            </frc-absolute-layout>
+
         </div>
     </frc-dashboard-builder>
     <script src="./node_modules/@frc-web-components/frc-web-components/build/frc-web-components.min.js"></script>
