@@ -55,6 +55,9 @@ public class Robot extends TimedRobot {
 
         robotSpeed = table.getEntry("speed");
         robotTurnRate = table.getEntry("turnRate");
+
+        robotTurnRate.setDouble(0);
+        robotSpeed.setDouble(0);
     }
 
     @Override
@@ -74,8 +77,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
-        robotTurnRate.setDouble(0);
-        robotSpeed.setDouble(0);
+        
     }
 
     @Override
