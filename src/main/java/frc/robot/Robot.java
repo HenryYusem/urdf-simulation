@@ -40,6 +40,7 @@ public class Robot extends TimedRobot {
     NetworkTable table;
     NetworkTableEntry robotSpeed;
     NetworkTableEntry robotTurnRate;
+    NetworkTableEntry climber2Climber3;
 
     /**
      * This function is run when the robot is first started up and should be used for any
@@ -51,13 +52,11 @@ public class Robot extends TimedRobot {
         NetworkTableInstance inst = NetworkTableInstance.getDefault();
 
         // get a reference to the subtable called "drivebase"
-        table = inst.getTable("drivebase");
+        table = inst.getTable("urdf");
 
-        robotSpeed = table.getEntry("speed");
-        robotTurnRate = table.getEntry("turnRate");
+        climber2Climber3 = table.getEntry("climber2Climber3");
 
-        robotTurnRate.setDouble(0);
-        robotSpeed.setDouble(0);
+        climber2Climber3.setDouble(0);
     }
 
     @Override

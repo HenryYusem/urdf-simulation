@@ -82,28 +82,28 @@
 		<origin xyz="0 -0.75 0" rpy="0 1.57 0" />
 	</joint>
 	
-	<joint name="shaft1-wheel1" type="continuous">
+	<joint name="shaft1Wheel1" type="continuous">
 		<parent link="shaft1" />
 		<child link="wheel1" />
 		<origin xyz="0 0 1.375" />
 		<axis xyz="0 0 1" />
 	</joint>
 	
-	<joint name="shaft1-wheel2" type="continuous">
+	<joint name="shaft1Wheel2" type="continuous">
 		<parent link="shaft1" />
 		<child link="wheel2" />
 		<origin xyz="0 0 -1.375" />
 		<axis xyz="0 0 1" />
 	</joint>
 	
-	<joint name="shaft2-wheel3" type="continuous">
+	<joint name="shaft2Wheel3" type="continuous">
 		<parent link="shaft2" />
 		<child link="wheel3" />
 		<origin xyz="0 0 1.375" />
 		<axis xyz="0 0 1" />
 	</joint>
 	
-	<joint name="shaft2-wheel4" type="continuous">
+	<joint name="shaft2Wheel4" type="continuous">
 		<parent link="shaft2" />
 		<child link="wheel4" />
 		<origin xyz="0 0 -1.375" />
@@ -118,7 +118,7 @@
 		</visual>
 	</link>
 	
-	<joint name="driveBase-hinge1" type="revolute">
+	<joint name="driveBaseHinge1" type="revolute">
 		<parent link="driveBase" />
 		<child link="hinge1" />
 		<origin xyz="1.05 1.4 0.3" />
@@ -205,7 +205,7 @@
 		</visual>
 	</link>
 	
-	<joint name="rollerhinge1-roller" type="continuous">
+	<joint name="rollerhinge1Roller" type="continuous">
 		<parent link="rollerhinge1" />
 		<child link="roller" />
 		<origin xyz="-0.95 0 0" rpy="0 1.57 0"/>
@@ -236,7 +236,7 @@
 		</visual>
 	</link>
 	
-	<joint name="driveBase-hinge3" type="revolute">
+	<joint name="driveBaseHinge3" type="revolute">
 		<parent link="driveBase" />
 		<child link="hinge3" />
 		<origin xyz="1.05 0 0.35" />
@@ -278,7 +278,7 @@
 		</visual>
 	</link>
 	
-	<joint name="piston1-pistonArm1" type="prismatic">
+	<joint name="piston1PistonArm1" type="prismatic">
 		<parent link="piston1" />
 		<child link="pistonArm1" />
 		<origin xyz="0 0 -1.075" />
@@ -322,7 +322,7 @@
 		</visual>
 	</link>
 	
-	<joint name="climber1-climber2" type="prismatic">
+	<joint name="climber1Climber2" type="prismatic">
 		<parent link="climber1" />
 		<child link="climber2" />
 		<origin xyz="0 0 1.25" />
@@ -338,7 +338,7 @@
 		</visual>
 	</link>
 	
-	<joint name="climber2-climber3" type="prismatic">
+	<joint name="climber2Climber3" type="prismatic">
 		<parent link="climber2" />
 		<child link="climber3" />
 		<origin xyz="0 0 0.75" />
@@ -354,7 +354,7 @@
 		</visual>
 	</link>
 	
-	<joint name="climber3-hinge5" type="revolute">
+	<joint name="climber3Hinge5" type="revolute">
 		<parent link="climber3" />
 		<child link="hinge5" />
 		<origin xyz=" 0 0 0.38" rpy="0 1.57 1.57" />
